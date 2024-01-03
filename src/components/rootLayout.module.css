@@ -1,3 +1,70 @@
+@media screen and (max-width: 430.99px) {
+  .logo {
+    width: 75%;
+    z-index: 5;
+    position: absolute;
+    top: 20%;
+    border: white solid;
+    border-radius: 50%;
+  }
+  .cocacola {
+    width: 38% !important;
+  }
+  .active {
+    width: 2.5rem;
+    text-decoration: none;
+    color: #e61d2b;
+    margin: 0 0.5rem;
+    border-bottom: solid transparent;
+    position: relative;
+    padding-bottom: 0.25rem;
+    font-size: 0.7rem;
+  }
+  .notActive {
+    width: 2.5rem;
+    text-decoration: none;
+    color: black;
+    margin: 0 0.5rem;
+    border-bottom: solid transparent;
+    position: relative;
+    padding-bottom: 0.25rem;
+    font-size: 0.7rem;
+  }
+  .active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e61d2b;
+    transition: width 0.3s ease;
+  }
+  .notActive::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e61d2b;
+    transition: width 0.3s ease;
+  }
+  .active:hover::after {
+    width: 100%;
+  }
+  .notActive:hover::after {
+    width: 100%;
+  }
+  .numberOfItems {
+    position: absolute;
+    bottom: 0.8rem !important;
+    right: 1.2rem !important;
+    width: 0.7rem !important;
+    height: 0.7rem !important;
+    font-size: 0.55rem !important;
+  }
+}
 @media screen and (max-width: 575.98px) {
   .logo {
     width: 75%;
