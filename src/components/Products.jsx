@@ -22,7 +22,10 @@ const Products = () => {
 
   //hàm lấy danh sách sản phẩm
   const fetchPds = useCallback(() => {
-    fetch(`${process.env.REACT_APP_BACKEND}/products/get-top-8`)
+    fetch(`${process.env.REACT_APP_BACKEND}/products/get-top-8`,{
+      method: "GET", 
+      credentials: "include"
+    })
       .then((response) => response.json())
       .then((data) => {
         if (!data.err) {
