@@ -18,8 +18,12 @@ const Home = () => {
         <div
           className={`w-100 d-flex justify-content-around align-items-center m-3 ${styles.bannerContent}`}
         >
-          <div style={{ color: "white" }}>
+          <div
+            className={styles.mobileBannerContent}
+            style={{ color: "white" }}
+          >
             <h2
+              className={styles.mobileBannerTopContent}
               style={{
                 borderBottom: "2px white solid",
                 paddingBottom: "0.5rem",
@@ -27,7 +31,10 @@ const Home = () => {
             >
               Share a <span className={styles.coke}>Coke</span> with...
             </h2>
-            <h4 style={{ fontWeight: "400" }}>
+            <h4
+              className={styles.mobileBannerBotContent}
+              style={{ fontWeight: "400" }}
+            >
               Say 'Alexa, let's share a Coke' to get a free personalised bottle.
             </h4>
           </div>
