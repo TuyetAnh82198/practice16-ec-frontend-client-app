@@ -13,7 +13,7 @@ const HistoryDetail = () => {
   const navigate = useNavigate();
   //hàm lấy thông tin đơn hàng và thông tin người dùng
   const fetchOrder = useCallback(() => {
-    fetch(`http://localhost:5000/cart/order-detail/${params.id}`, {
+    fetch(`${process.env.REACT_APP_BACKEND}/cart/order-detail/${params.id}`, {
       method: "GET",
       credentials: "include",
     })
