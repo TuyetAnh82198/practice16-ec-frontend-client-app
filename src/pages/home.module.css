@@ -1,3 +1,19 @@
+/* mobile */
+@media screen and (max-width: 430.99px) {
+  .mobileBannerContent {
+    width: 10rem;
+  }
+  .mobileBannerTopContent {
+    font-size: 1.5rem;
+  }
+  .mobileBannerBotContent {
+    font-size: 1rem;
+  }
+  .coke {
+    font-size: 2rem;
+    font-family: serif;
+  }
+}
 /*xxl*/
 @media screen and (min-width: 1400px) {
   .coke {
