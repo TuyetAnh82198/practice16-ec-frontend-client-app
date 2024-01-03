@@ -41,24 +41,24 @@ const Categories = () => {
       >
         <div className={`col-4 ${styles.teasImg}`}>
           <img
-            style={{ width: "94%", height: "16.5rem" }}
-            className="shadow rounded-1"
+            style={{ width: "94%" }}
+            className={`shadow rounded-1 ${styles.mobileImg}`}
             src={teas}
             alt=""
           />
         </div>
         <div className={`col-4 ${styles.dairyDrinksImg}`}>
           <img
-            style={{ width: "94%", height: "16.5rem" }}
-            className="shadow rounded-1"
+            style={{ width: "94%" }}
+            className={`shadow rounded-1 ${styles.mobileImg}`}
             src={dairy_drinks}
             alt=""
           />
         </div>
         <div className={`col-4 ${styles.waterImg}`}>
           <img
-            style={{ width: "94%", height: "16.5rem" }}
-            className="shadow rounded-1"
+            style={{ width: "94%" }}
+            className={`shadow rounded-1 ${styles.mobileImg}`}
             src={water}
             alt=""
           />
