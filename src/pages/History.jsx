@@ -14,7 +14,7 @@ const History = () => {
   const navigate = useNavigate();
   //hàm lấy lịch sử đơn hàng
   const fetchCart = useCallback(() => {
-    fetch("http://localhost:5000/cart/history", {
+    fetch(`${process.env.REACT_APP_BACKEND}/cart/history`), {
       method: "GET",
       credentials: "include",
     })
