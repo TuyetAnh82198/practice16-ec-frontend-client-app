@@ -10,6 +10,8 @@ import {
 } from "react-bootstrap-icons";
 
 import GrayBanner from "../components/GrayBanner";
+import { FacebookIcon, PinterestIcon, TelegramIcon, XIcon } from "react-share";
+
 const RelatedProducts = lazy(() => import("../components/RelatedProducts.jsx"));
 
 const Detail = () => {
@@ -79,17 +81,41 @@ const Detail = () => {
         <div>
           <div className="d-flex my-4">
             <div className="col-2">
-              {pd.imgs.map((img) => (
-                <img
-                  className="d-block my-2"
-                  width="26%"
-                  onClick={() => setSelectedImg(img)}
+              <div>
+                {pd.imgs.map((img) => (
+                  <img
+                    className="d-block my-2"
+                    width="26%"
+                    onClick={() => setSelectedImg(img)}
+                    style={{ cursor: "pointer" }}
+                    key={Math.random() * 5}
+                    src={`${process.env.REACT_APP_BACKEND}/${img}`}
+                    alt=""
+                  />
+                ))}
+              </div>
+              <div>
+                <FacebookIcon
+                  size={32}
+                  round="true"
                   style={{ cursor: "pointer" }}
-                  key={Math.random() * 5}
-                  src={`${process.env.REACT_APP_BACKEND}/${img}`}
-                  alt=""
                 />
-              ))}
+                <TelegramIcon
+                  size={32}
+                  round="true"
+                  style={{ cursor: "pointer", margin: "0 0.5rem" }}
+                />
+                <PinterestIcon
+                  size={32}
+                  round="true"
+                  style={{ cursor: "pointer" }}
+                />
+                <XIcon
+                  size={32}
+                  round="true"
+                  style={{ cursor: "pointer", margin: "0 0.5rem" }}
+                />
+              </div>
             </div>
             <div className="col-4">
               <img
