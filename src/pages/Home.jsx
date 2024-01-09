@@ -45,6 +45,7 @@ const Home = () => {
             src="https://giphy.com/embed/l3xt2qEof1olEZeDGO"
             frameBorder="0"
             height="100%"
+            width="100%"
           ></iframe>
         </div>
       </div>
