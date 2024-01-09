@@ -39,7 +39,7 @@ const Home = () => {
             </h4>
           </div>
         </div>
-        <div>
+        <div className="col-3 py-2">
           <iframe
             className={styles.iframe}
             src="https://giphy.com/embed/l3xt2qEof1olEZeDGO"
