@@ -10,7 +10,14 @@ import {
 } from "react-bootstrap-icons";
 
 import GrayBanner from "../components/GrayBanner";
-import { FacebookIcon, PinterestIcon, TelegramIcon, XIcon } from "react-share";
+import { FacebookIcon,
+  FacebookShareButton,
+  PinterestIcon,
+  PinterestShareButton,
+  TelegramIcon,
+  TelegramShareButton,
+  XIcon,
+  TwitterShareButton } from "react-share";
 
 const RelatedProducts = lazy(() => import("../components/RelatedProducts.jsx"));
 
@@ -94,27 +101,38 @@ const Detail = () => {
                   />
                 ))}
               </div>
-              <div>
-                <FacebookIcon
-                  size={32}
-                  round="true"
-                  style={{ cursor: "pointer" }}
-                />
-                <TelegramIcon
-                  size={32}
-                  round="true"
-                  style={{ cursor: "pointer", margin: "0 0.5rem" }}
-                />
-                <PinterestIcon
-                  size={32}
-                  round="true"
-                  style={{ cursor: "pointer" }}
-                />
-                <XIcon
-                  size={32}
-                  round="true"
-                  style={{ cursor: "pointer", margin: "0 0.5rem" }}
-                />
+             <div>
+                <FacebookShareButton url="https://www.facebook.com">
+                  <FacebookIcon
+                    size={32}
+                    round="true"
+                    style={{ cursor: "pointer" }}
+                  />
+                </FacebookShareButton>
+                <TelegramShareButton url="https://web.telegram.org">
+                  <TelegramIcon
+                    size={32}
+                    round="true"
+                    style={{ cursor: "pointer", margin: "0 0.5rem" }}
+                  />
+                </TelegramShareButton>
+                <PinterestShareButton
+                  url="https://www.pinterest.com"
+                  media={`${process.env.REACT_APP_BACKEND}/${pd.imgs[0]}`}
+                >
+                  <PinterestIcon
+                    size={32}
+                    round="true"
+                    style={{ cursor: "pointer" }}
+                  />
+                </PinterestShareButton>
+                <TwitterShareButton url="https://twitter.com/?lang=vi">
+                  <XIcon
+                    size={32}
+                    round="true"
+                    style={{ cursor: "pointer", margin: "0 0.5rem" }}
+                  />
+                </TwitterShareButton>
               </div>
             </div>
             <div className="col-4">
