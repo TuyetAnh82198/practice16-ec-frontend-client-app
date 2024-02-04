@@ -76,6 +76,7 @@ const Products = () => {
           ))}
         </div>
         <div className="d-flex justify-content-between">
+          {pds.length === 0 && <p>Loading...</p>}
           {pds.slice(4).map((pd) => (
             <div
               key={pd._id}
